@@ -1,9 +1,17 @@
 package com.example.parkinggaragemanagementsystem;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 public class ParkingGarageController {
+
+    @FXML
+    private Button addButton;
+
+    @FXML
+    private Button calcButton;
+
     @FXML
     private Label carsEnteredLabel;
 
@@ -17,7 +25,22 @@ public class ParkingGarageController {
     private Label currentRevenueLabel;
 
     @FXML
+    private Button editButton;
+
+    @FXML
+    private Button exitButton;
+
+    @FXML
+    private Button historyButton;
+
+    @FXML
     private Label occupiedSpotsLabel;
+
+    @FXML
+    private Button removeButton;
+
+    @FXML
+    private Button resetButton;
 
     @FXML
     private Label spotBaseCostLabel;
@@ -42,4 +65,11 @@ public class ParkingGarageController {
 
     @FXML
     private Label spotVehicleTypeLabel;
+
+    @FXML
+    private Button undoButton;
+
+    @FXML
+    private Label vacantSpotsLabel;
+
 }

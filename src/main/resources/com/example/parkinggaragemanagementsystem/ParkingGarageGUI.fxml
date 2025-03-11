@@ -10,35 +10,33 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/"
-   fx:controller="com.example.parkinggaragemanagementsystem.ParkingGarageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parkinggaragemanagementsystem.ParkingGarageController">
    <children>
       <SplitPane dividerPositions="0.2" layoutX="186.0" layoutY="224.0" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Button layoutX="30.0" layoutY="223.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" text="Add Car">
+                  <Button fx:id="addButton" layoutX="30.0" layoutY="223.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" text="Add Car">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </Button>
-                  <Button layoutX="30.0" layoutY="283.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" text="Remove Car">
+                  <Button fx:id="removeButton" layoutX="30.0" layoutY="283.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" text="Remove Car">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </Button>
-                  <Button layoutX="30.0" layoutY="344.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" text="Calculate Spot">
+                  <Button fx:id="calcButton" layoutX="30.0" layoutY="344.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" text="Calculate Spot">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </Button>
-                  <Button layoutX="30.0" layoutY="406.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="70.0" text="Undo">
+                  <Button fx:id="undoButton" layoutX="30.0" layoutY="406.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="70.0" text="Undo">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button layoutX="151.0" layoutY="406.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="70.0" text="Edit">
+                  <Button fx:id="editButton" layoutX="151.0" layoutY="406.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="70.0" text="Edit">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -287,17 +285,17 @@
                                                 <Font name="System Bold" size="24.0" />
                                              </font>
                                           </Label>
-                                          <Button layoutX="397.0" layoutY="22.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="94.0" text="History">
+                                          <Button fx:id="historyButton" layoutX="397.0" layoutY="22.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="94.0" text="History">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
                                           </Button>
-                                          <Button layoutX="397.0" layoutY="76.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="94.0" text="Reset">
+                                          <Button fx:id="resetButton" layoutX="397.0" layoutY="76.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="94.0" text="Reset">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
                                           </Button>
-                                          <Button layoutX="397.0" layoutY="131.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="94.0" text="Exit">
+                                          <Button fx:id="exitButton" layoutX="397.0" layoutY="131.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="94.0" text="Exit">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
