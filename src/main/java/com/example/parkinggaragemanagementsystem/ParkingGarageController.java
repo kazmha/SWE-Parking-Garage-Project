@@ -29,6 +29,7 @@ public class ParkingGarageController {
     @FXML private Button calculateSpotButton;
     @FXML private Label carsEnteredLabel;
     @FXML private Label carsExitedLabel;
+    @FXML private Label carSpotLabel;
     @FXML private Label currentProfitLabel;
     @FXML private Label currentRevenueLabel;
     @FXML private Label currentTimeLabel;
@@ -63,21 +64,21 @@ public class ParkingGarageController {
 
     @FXML
     public void initialize() {
-        buttonA1.setOnAction(e -> System.out.println("Button A1 was pressed!"));
-        buttonA2.setOnAction(e -> System.out.println("Button A2 was pressed!"));
-        buttonA3.setOnAction(e -> System.out.println("Button A3 was pressed!"));
-        buttonB1.setOnAction(e -> System.out.println("Button B1 was pressed!"));
-        buttonB2.setOnAction(e -> System.out.println("Button B2 was pressed!"));
-        buttonB3.setOnAction(e -> System.out.println("Button B3 was pressed!"));
-        buttonC1.setOnAction(e -> System.out.println("Button C1 was pressed!"));
-        buttonC2.setOnAction(e -> System.out.println("Button C2 was pressed!"));
-        buttonC3.setOnAction(e -> System.out.println("Button C3 was pressed!"));
-        buttonD1.setOnAction(e -> System.out.println("Button D1 was pressed!"));
-        buttonD2.setOnAction(e -> System.out.println("Button D2 was pressed!"));
-        buttonD3.setOnAction(e -> System.out.println("Button D3 was pressed!"));
-        buttonE1.setOnAction(e -> System.out.println("Button E1 was pressed!"));
-        buttonE2.setOnAction(e -> System.out.println("Button E2 was pressed!"));
-        buttonE3.setOnAction(e -> System.out.println("Button E3 was pressed!"));
+        buttonA1.setOnAction(e -> carSpotLabel.setText("A1:"));
+        buttonA2.setOnAction(e -> carSpotLabel.setText("A2:"));
+        buttonA3.setOnAction(e -> carSpotLabel.setText("A3:"));
+        buttonB1.setOnAction(e -> carSpotLabel.setText("B1:"));
+        buttonB2.setOnAction(e -> carSpotLabel.setText("B2:"));
+        buttonB3.setOnAction(e -> carSpotLabel.setText("B3:"));
+        buttonC1.setOnAction(e -> carSpotLabel.setText("C1:"));
+        buttonC2.setOnAction(e -> carSpotLabel.setText("C2:"));
+        buttonC3.setOnAction(e -> carSpotLabel.setText("C3:"));
+        buttonD1.setOnAction(e -> carSpotLabel.setText("D1:"));
+        buttonD2.setOnAction(e -> carSpotLabel.setText("D2:"));
+        buttonD3.setOnAction(e -> carSpotLabel.setText("D3:"));
+        buttonE1.setOnAction(e -> carSpotLabel.setText("E1:"));
+        buttonE2.setOnAction(e -> carSpotLabel.setText("E2:"));
+        buttonE3.setOnAction(e -> carSpotLabel.setText("E3:"));
 
         exitButton.setOnAction(e -> System.exit(0));
 
@@ -95,7 +96,8 @@ public class ParkingGarageController {
                 String currentDay = days[calendar.get(Calendar.DAY_OF_WEEK) - 1];
                 String currentMonth = months[calendar.get(Calendar.MONTH)];
                 int day = calendar.get(Calendar.DAY_OF_MONTH);
-                int month = calendar.get(Calendar.MONTH);int year = calendar.get(Calendar.YEAR);
+                int month = calendar.get(Calendar.MONTH);
+                int year = calendar.get(Calendar.YEAR);
 
                 todaysDateLabel.setText(" " + currentDay + ", \n" + currentMonth + " " + day + ", " + year);
 
