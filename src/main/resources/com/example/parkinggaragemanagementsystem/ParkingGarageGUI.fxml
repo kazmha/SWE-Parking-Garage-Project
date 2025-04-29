@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="com.example.parkinggaragemanagementsystem.ParkingGarageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parkinggaragemanagementsystem.ParkingGarageController">
    <children>
       <SplitPane dividerPositions="0.2" layoutX="186.0" layoutY="224.0" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -276,7 +276,7 @@
                                 <items>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                        <children>
-                                          <Label layoutX="57.0" layoutY="35.0" text="A1:&#10;Vehicle:&#10;Time:&#10;Type:&#10;">
+                                          <Label layoutX="55.0" layoutY="66.0" prefWidth="68.0" text="Vehicle:&#10;Time:&#10;Type:&#10;">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
@@ -324,6 +324,11 @@
                                           <Label fx:id="spotTotalCostLabel1" layoutX="396.0" layoutY="127.0" text="\$0.00">
                                              <font>
                                                 <Font name="System Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="carSpotLabel" layoutX="55.0" layoutY="35.0" prefWidth="68.0" text="Spot:">
+                                             <font>
+                                                <Font size="20.0" />
                                              </font>
                                           </Label>
                                        </children>
