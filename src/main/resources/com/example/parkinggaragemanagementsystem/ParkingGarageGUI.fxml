@@ -10,23 +10,23 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parkinggaragemanagementsystem.ParkingGarageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="com.example.parkinggaragemanagementsystem.ParkingGarageController">
    <children>
       <SplitPane dividerPositions="0.2" layoutX="186.0" layoutY="224.0" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Button fx:id="addButton" layoutX="30.0" layoutY="223.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" text="Add Car">
+                  <Button fx:id="addCarButton" layoutX="30.0" layoutY="223.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" text="Add Car">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </Button>
-                  <Button fx:id="removeButton" layoutX="30.0" layoutY="283.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" text="Remove Car">
+                  <Button fx:id="removeCarButton" layoutX="30.0" layoutY="283.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" text="Remove Car">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </Button>
-                  <Button fx:id="calcButton" layoutX="30.0" layoutY="344.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" text="Calculate Spot">
+                  <Button fx:id="calculateSpotButton" layoutX="30.0" layoutY="344.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" text="Calculate Spot">
                      <font>
                         <Font size="25.0" />
                      </font>
@@ -46,9 +46,9 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Label layoutX="73.0" layoutY="98.0" text="Tuesday,&#10;March 7th&#10;2025" textAlignment="CENTER">
+                  <Label fx:id="todaysDateLabel" alignment="CENTER" layoutX="24.0" layoutY="96.0" prefHeight="110.0" prefWidth="204.0" text="DatePlaceHolder" textAlignment="CENTER" wrapText="true">
                      <font>
-                        <Font size="24.0" />
+                        <Font size="26.0" />
                      </font>
                   </Label>
                   <Label layoutX="30.0" layoutY="465.0" text="Cars entered:&#10;Cars exited:">
@@ -61,7 +61,7 @@
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <Label layoutX="42.0" layoutY="638.0" text="4:00 PM" textAlignment="CENTER">
+                  <Label fx:id="currentTimeLabel" alignment="CENTER" layoutX="21.0" layoutY="637.0" prefHeight="66.0" prefWidth="210.0" text="0:00" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="44.0" />
                      </font>
@@ -99,111 +99,171 @@
                                     <VBox alignment="CENTER" prefHeight="516.0" prefWidth="203.68">
                                        <children>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="A1" textAlignment="CENTER" />
-                                          <ImageView fitHeight="150.0" fitWidth="203.68" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/carPlaceHolderImage.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Button fx:id="buttonA1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                             <graphic>
+                                                <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="A2" textAlignment="CENTER" />
-                                          <ImageView fitHeight="150.0" fitWidth="203.68" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/carPlaceHolderImage.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Button fx:id="buttonA2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                             <graphic>
+                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="A3" textAlignment="CENTER" />
-                                          <ImageView fitHeight="150.0" fitWidth="203.68" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/carPlaceHolderImage.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Button fx:id="buttonA3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                             <graphic>
+                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
                                        </children>
                                     </VBox>
                                     <VBox alignment="CENTER" prefHeight="516.0" prefWidth="203.68">
                                        <children>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="B1" textAlignment="CENTER" />
-                                          <ImageView fitHeight="150.0" fitWidth="203.68" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/carPlaceHolderImage.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Button fx:id="buttonB1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                             <graphic>
+                                                <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="B2" textAlignment="CENTER" />
-                                          <ImageView fitHeight="150.0" fitWidth="203.68" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/carPlaceHolderImage.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Button fx:id="buttonB2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                             <graphic>
+                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="B3" textAlignment="CENTER" />
-                                          <ImageView fitHeight="150.0" fitWidth="203.68" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/carPlaceHolderImage.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Button fx:id="buttonB3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                             <graphic>
+                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
                                        </children>
                                     </VBox>
                                     <VBox alignment="CENTER" prefHeight="516.0" prefWidth="203.68">
                                        <children>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="C1" textAlignment="CENTER" />
-                                          <ImageView fitHeight="150.0" fitWidth="203.68" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/carPlaceHolderImage.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Button fx:id="buttonC1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                             <graphic>
+                                                <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="C2" textAlignment="CENTER" />
-                                          <ImageView fitHeight="150.0" fitWidth="203.68" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/carPlaceHolderImage.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Button fx:id="buttonC2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                             <graphic>
+                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="C3" textAlignment="CENTER" />
-                                          <ImageView fitHeight="150.0" fitWidth="203.68" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/carPlaceHolderImage.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Button fx:id="buttonC3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                             <graphic>
+                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
                                        </children>
                                     </VBox>
                                     <VBox alignment="CENTER" prefHeight="516.0" prefWidth="203.68">
                                        <children>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="D1" textAlignment="CENTER" />
-                                          <ImageView fitHeight="150.0" fitWidth="203.68" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/carPlaceHolderImage.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Button fx:id="buttonD1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                             <graphic>
+                                                <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="D2" textAlignment="CENTER" />
-                                          <ImageView fitHeight="150.0" fitWidth="203.68" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/carPlaceHolderImage.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Button fx:id="buttonD2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                             <graphic>
+                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="D3" textAlignment="CENTER" />
-                                          <ImageView fitHeight="150.0" fitWidth="203.68" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/carPlaceHolderImage.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Button fx:id="buttonD3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                             <graphic>
+                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
                                        </children>
                                     </VBox>
                                     <VBox alignment="CENTER" prefHeight="516.0" prefWidth="203.68">
                                        <children>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="E1" textAlignment="CENTER" />
-                                          <ImageView fitHeight="150.0" fitWidth="203.68" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/carPlaceHolderImage.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Button fx:id="buttonE1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                             <graphic>
+                                                <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="E2" textAlignment="CENTER" />
-                                          <ImageView fitHeight="150.0" fitWidth="203.68" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/carPlaceHolderImage.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Button fx:id="buttonE2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                             <graphic>
+                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="E3" textAlignment="CENTER" />
-                                          <ImageView fitHeight="150.0" fitWidth="203.68" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../images/carPlaceHolderImage.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Button fx:id="buttonE3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                             <graphic>
+                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
                                        </children>
                                     </VBox>
                                  </children>
