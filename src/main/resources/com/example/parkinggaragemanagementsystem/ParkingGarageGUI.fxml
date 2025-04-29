@@ -103,7 +103,7 @@
                                              <graphic>
                                                 <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../images/carPlaceHolderImage.png" />
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -113,7 +113,7 @@
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../images/carPlaceHolderImage.png" />
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -123,7 +123,7 @@
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../images/carPlaceHolderImage.png" />
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -137,7 +137,7 @@
                                              <graphic>
                                                 <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../images/carPlaceHolderImage.png" />
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -147,7 +147,7 @@
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../images/carPlaceHolderImage.png" />
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -157,7 +157,7 @@
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../images/carPlaceHolderImage.png" />
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -171,7 +171,7 @@
                                              <graphic>
                                                 <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../images/carPlaceHolderImage.png" />
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -181,7 +181,7 @@
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../images/carPlaceHolderImage.png" />
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -191,7 +191,7 @@
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../images/carPlaceHolderImage.png" />
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -205,7 +205,7 @@
                                              <graphic>
                                                 <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../images/carPlaceHolderImage.png" />
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -215,7 +215,7 @@
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../images/carPlaceHolderImage.png" />
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -225,7 +225,7 @@
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../images/carPlaceHolderImage.png" />
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -239,7 +239,7 @@
                                              <graphic>
                                                 <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../images/carPlaceHolderImage.png" />
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -249,7 +249,7 @@
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../images/carPlaceHolderImage.png" />
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
@@ -259,7 +259,7 @@
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../images/carPlaceHolderImage.png" />
+                                                      <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
                                                 </ImageView>
                                              </graphic>
