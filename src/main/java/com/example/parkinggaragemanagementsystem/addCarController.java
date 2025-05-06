@@ -18,6 +18,9 @@ public class addCarController {
     private Button addCarButton;
 
     @FXML
+    private Button removeCarButton;
+
+    @FXML
     private TextField name_input;
 
     @FXML
@@ -38,7 +41,7 @@ public class addCarController {
         String spotId = spotId_input.getText();
         Car car = parkingSpots.get(spotId);
         if (car != null) {
-            car.setId(spotId);
+            car.setId("Occupied");
             car.setLicensePlateNumber(name_input.getText());
             car.setTime(timeEntered_input.getText());
             car.setType(typeOfVehicle_input.getText());
@@ -46,9 +49,22 @@ public class addCarController {
     }
 
     @FXML
+    void removeCar() {
+        String spotId = spotId_input.getText();
+        Car car = parkingSpots.get(spotId);
+        if (car != null) {
+            parkingSpots.put(spotId, new Car());
+        }
+    }
+
+    @FXML
     public void initialize() {
         addCarButton.setOnAction(e -> {
             addCar();
+            stage.close();
+        });
+        removeCarButton.setOnAction(e -> {
+            removeCar();
             stage.close();
         });
     }
