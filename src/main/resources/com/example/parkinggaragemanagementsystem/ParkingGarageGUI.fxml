@@ -12,76 +12,76 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parkinggaragemanagementsystem.ParkingGarageController">
    <children>
-      <SplitPane dividerPositions="0.2" layoutX="186.0" layoutY="224.0" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.2" layoutX="186.0" layoutY="224.0" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #FFD700;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #3c4142;">
                <children>
-                  <Button fx:id="addCarButton" layoutX="30.0" layoutY="223.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" text="Add Car">
+                  <Button fx:id="addCarButton" layoutX="30.0" layoutY="223.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" style="-fx-background-color: #FFD700;" text="Add Car">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </Button>
-                  <Button fx:id="removeCarButton" layoutX="30.0" layoutY="283.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" text="Remove Car">
+                  <Button fx:id="removeCarButton" layoutX="30.0" layoutY="283.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" style="-fx-background-color: #FFD700;" text="Remove Car">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </Button>
-                  <Button fx:id="calculateSpotButton" layoutX="30.0" layoutY="344.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" text="Calculate Spot">
+                  <Button fx:id="calculateSpotButton" layoutX="30.0" layoutY="344.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="192.0" style="-fx-background-color: #FFD700;" text="Calculate Spot">
                      <font>
                         <Font size="25.0" />
                      </font>
                   </Button>
-                  <Button fx:id="undoButton" layoutX="30.0" layoutY="406.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="70.0" text="Undo">
+                  <Button fx:id="undoButton" layoutX="30.0" layoutY="406.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="70.0" style="-fx-background-color: #FFD700;" text="Undo">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="editButton" layoutX="151.0" layoutY="406.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="70.0" text="Edit">
+                  <Button fx:id="editButton" layoutX="151.0" layoutY="406.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="70.0" style="-fx-background-color: #FFD700;" text="Edit">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Label alignment="CENTER" layoutX="7.0" layoutY="14.0" text="Parking Garage&#10;Management System" textAlignment="CENTER">
+                  <Label alignment="CENTER" layoutX="7.0" layoutY="14.0" text="Parking Garage&#10;Management System" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Label fx:id="todaysDateLabel" alignment="CENTER" layoutX="24.0" layoutY="96.0" prefHeight="110.0" prefWidth="204.0" text="DatePlaceHolder" textAlignment="CENTER" wrapText="true">
+                  <Label fx:id="todaysDateLabel" alignment="CENTER" layoutX="24.0" layoutY="96.0" prefHeight="110.0" prefWidth="204.0" text="DatePlaceHolder" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                      <font>
                         <Font size="26.0" />
                      </font>
                   </Label>
-                  <Label layoutX="30.0" layoutY="465.0" text="Cars entered:&#10;Cars exited:">
+                  <Label layoutX="30.0" layoutY="465.0" text="Cars entered:&#10;Cars exited:" textFill="WHITE">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <Label layoutX="30.0" layoutY="542.0" text="Vacant spots:&#10;Occupied spots:">
+                  <Label layoutX="30.0" layoutY="542.0" text="Vacant spots:&#10;Occupied spots:" textFill="WHITE">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
-                  <Label fx:id="currentTimeLabel" alignment="CENTER" layoutX="21.0" layoutY="637.0" prefHeight="66.0" prefWidth="210.0" text="0:00" textAlignment="CENTER">
+                  <Label fx:id="currentTimeLabel" alignment="CENTER" layoutX="21.0" layoutY="637.0" prefHeight="66.0" prefWidth="210.0" text="0:00" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="44.0" />
                      </font>
                   </Label>
-                  <Label fx:id="carsEnteredLabel" layoutX="172.0" layoutY="467.0" text="0">
+                  <Label fx:id="carsEnteredLabel" layoutX="172.0" layoutY="467.0" text="0" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="carsExitedLabel" layoutX="172.0" layoutY="499.0" text="0">
+                  <Label fx:id="carsExitedLabel" layoutX="172.0" layoutY="499.0" text="0" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="vacantSpotsLabel" layoutX="198.0" layoutY="545.0" text="0">
+                  <Label fx:id="vacantSpotsLabel" layoutX="198.0" layoutY="545.0" text="0" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="occupiedSpotsLabel" layoutX="198.0" layoutY="578.0" text="0">
+                  <Label fx:id="occupiedSpotsLabel" layoutX="198.0" layoutY="578.0" text="0" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
@@ -94,12 +94,12 @@
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="472.0" prefWidth="1024.0">
                            <children>
-                              <HBox layoutX="240.0" layoutY="241.0" prefHeight="516.0" prefWidth="1018.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <HBox layoutX="240.0" layoutY="241.0" prefHeight="516.0" prefWidth="1018.4" style="-fx-background-color: #FFD700;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
                                     <VBox alignment="CENTER" prefHeight="516.0" prefWidth="203.68">
                                        <children>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="A1" textAlignment="CENTER" />
-                                          <Button fx:id="buttonA1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                          <Button fx:id="buttonA1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
                                                 <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
@@ -109,7 +109,7 @@
                                              </graphic>
                                           </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="A2" textAlignment="CENTER" />
-                                          <Button fx:id="buttonA2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                          <Button fx:id="buttonA2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
@@ -119,7 +119,7 @@
                                              </graphic>
                                           </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="A3" textAlignment="CENTER" />
-                                          <Button fx:id="buttonA3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                          <Button fx:id="buttonA3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
@@ -133,7 +133,7 @@
                                     <VBox alignment="CENTER" prefHeight="516.0" prefWidth="203.68">
                                        <children>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="B1" textAlignment="CENTER" />
-                                          <Button fx:id="buttonB1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                          <Button fx:id="buttonB1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
                                                 <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
@@ -143,7 +143,7 @@
                                              </graphic>
                                           </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="B2" textAlignment="CENTER" />
-                                          <Button fx:id="buttonB2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                          <Button fx:id="buttonB2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
@@ -153,7 +153,7 @@
                                              </graphic>
                                           </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="B3" textAlignment="CENTER" />
-                                          <Button fx:id="buttonB3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                          <Button fx:id="buttonB3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
@@ -167,7 +167,7 @@
                                     <VBox alignment="CENTER" prefHeight="516.0" prefWidth="203.68">
                                        <children>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="C1" textAlignment="CENTER" />
-                                          <Button fx:id="buttonC1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                          <Button fx:id="buttonC1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
                                                 <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
@@ -177,7 +177,7 @@
                                              </graphic>
                                           </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="C2" textAlignment="CENTER" />
-                                          <Button fx:id="buttonC2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                          <Button fx:id="buttonC2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
@@ -187,7 +187,7 @@
                                              </graphic>
                                           </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="C3" textAlignment="CENTER" />
-                                          <Button fx:id="buttonC3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                          <Button fx:id="buttonC3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
@@ -201,7 +201,7 @@
                                     <VBox alignment="CENTER" prefHeight="516.0" prefWidth="203.68">
                                        <children>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="D1" textAlignment="CENTER" />
-                                          <Button fx:id="buttonD1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                          <Button fx:id="buttonD1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
                                                 <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
@@ -211,7 +211,7 @@
                                              </graphic>
                                           </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="D2" textAlignment="CENTER" />
-                                          <Button fx:id="buttonD2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                          <Button fx:id="buttonD2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
@@ -221,7 +221,7 @@
                                              </graphic>
                                           </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="D3" textAlignment="CENTER" />
-                                          <Button fx:id="buttonD3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                          <Button fx:id="buttonD3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
@@ -235,7 +235,7 @@
                                     <VBox alignment="CENTER" prefHeight="516.0" prefWidth="203.68">
                                        <children>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="E1" textAlignment="CENTER" />
-                                          <Button fx:id="buttonE1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                          <Button fx:id="buttonE1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
                                                 <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
@@ -245,7 +245,7 @@
                                              </graphic>
                                           </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="E2" textAlignment="CENTER" />
-                                          <Button fx:id="buttonE2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                          <Button fx:id="buttonE2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
@@ -255,7 +255,7 @@
                                              </graphic>
                                           </Button>
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="E3" textAlignment="CENTER" />
-                                          <Button fx:id="buttonE3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68">
+                                          <Button fx:id="buttonE3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
                                                 <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
@@ -270,63 +270,63 @@
                               </HBox>
                            </children>
                         </AnchorPane>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="178.0" prefWidth="1018.0">
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="178.0" prefWidth="1018.0" style="-fx-background-color: #FFD700;">
                            <children>
-                              <SplitPane dividerPositions="0.5" layoutX="402.0" layoutY="18.0" prefHeight="195.2" prefWidth="1018.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <SplitPane dividerPositions="0.5" layoutX="402.0" layoutY="18.0" prefHeight="195.2" prefWidth="1018.4" style="-fx-background-color: #3c4142;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <items>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                        <children>
-                                          <Label layoutX="55.0" layoutY="66.0" prefWidth="68.0" text="Vehicle:&#10;Time:&#10;Type:&#10;">
+                                          <Label layoutX="55.0" layoutY="66.0" prefWidth="68.0" text="Vehicle:&#10;Time:&#10;Type:&#10;" textFill="WHITE">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="spotStatusLabel" layoutX="145.0" layoutY="35.0" text="Unoccupied">
+                                          <Label fx:id="spotStatusLabel" layoutX="145.0" layoutY="35.0" text="Unoccupied" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="20.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="spotLicensePlateLabel" layoutX="145.0" layoutY="65.0" text="#N/A">
+                                          <Label fx:id="spotLicensePlateLabel" layoutX="145.0" layoutY="65.0" text="#N/A" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="20.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="spotTimeFrameLabel" layoutX="145.0" layoutY="96.0" text="0:00 AM">
+                                          <Label fx:id="spotTimeFrameLabel" layoutX="145.0" layoutY="96.0" text="0:00 AM" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="20.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="spotVehicleTypeLabel" layoutX="145.0" layoutY="127.0" text="N/A">
+                                          <Label fx:id="spotVehicleTypeLabel" layoutX="145.0" layoutY="127.0" text="N/A" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="20.0" />
                                              </font>
                                           </Label>
-                                          <Label layoutX="285.0" layoutY="36.0" text="Spot Cost:&#10;Taxes:&#10;Late Fee:&#10;Total Cost:&#10;">
+                                          <Label layoutX="285.0" layoutY="36.0" text="Spot Cost:&#10;Taxes:&#10;Late Fee:&#10;Total Cost:&#10;" textFill="WHITE">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="spotBaseCostLabel" layoutX="396.0" layoutY="35.0" text="\$0.00">
+                                          <Label fx:id="spotBaseCostLabel" layoutX="396.0" layoutY="35.0" text="\$0.00" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="20.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="spotTaxesLabel" layoutX="396.0" layoutY="65.0" text="\$0.00">
+                                          <Label fx:id="spotTaxesLabel" layoutX="396.0" layoutY="65.0" text="\$0.00" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="20.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="spotLateFeeLabel" layoutX="396.0" layoutY="96.0" text="\$0.00">
+                                          <Label fx:id="spotLateFeeLabel" layoutX="396.0" layoutY="96.0" text="\$0.00" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="20.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="spotTotalCostLabel1" layoutX="396.0" layoutY="127.0" text="\$0.00">
+                                          <Label fx:id="spotTotalCostLabel1" layoutX="396.0" layoutY="127.0" text="\$0.00" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="20.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="carSpotLabel" layoutX="55.0" layoutY="35.0" prefWidth="68.0" text="Spot:">
+                                          <Label fx:id="carSpotLabel" layoutX="55.0" layoutY="35.0" prefWidth="68.0" text="Spot:" textFill="WHITE">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
@@ -335,32 +335,32 @@
                                     </AnchorPane>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                        <children>
-                                          <Label layoutX="14.0" layoutY="61.0" text="Current Revenue:&#10;Current Profit:&#10;">
+                                          <Label layoutX="14.0" layoutY="61.0" text="Current Revenue:&#10;Current Profit:&#10;" textFill="WHITE">
                                              <font>
                                                 <Font size="24.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="currentRevenueLabel" layoutX="212.0" layoutY="62.0" text="\$0.00">
+                                          <Label fx:id="currentRevenueLabel" layoutX="212.0" layoutY="62.0" text="\$0.00" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="24.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="currentProfitLabel" layoutX="212.0" layoutY="97.0" text="\$0.00">
+                                          <Label fx:id="currentProfitLabel" layoutX="212.0" layoutY="97.0" text="\$0.00" textFill="WHITE">
                                              <font>
                                                 <Font name="System Bold" size="24.0" />
                                              </font>
                                           </Label>
-                                          <Button fx:id="historyButton" layoutX="397.0" layoutY="22.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="94.0" text="History">
+                                          <Button fx:id="historyButton" layoutX="397.0" layoutY="22.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #FFD700;" text="History">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
                                           </Button>
-                                          <Button fx:id="resetButton" layoutX="397.0" layoutY="76.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="94.0" text="Reset">
+                                          <Button fx:id="resetButton" layoutX="397.0" layoutY="76.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #FFD700;" text="Reset">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
                                           </Button>
-                                          <Button fx:id="exitButton" layoutX="397.0" layoutY="131.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="94.0" text="Exit">
+                                          <Button fx:id="exitButton" layoutX="397.0" layoutY="131.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #FFD700;" text="Exit">
                                              <font>
                                                 <Font size="18.0" />
                                              </font>
