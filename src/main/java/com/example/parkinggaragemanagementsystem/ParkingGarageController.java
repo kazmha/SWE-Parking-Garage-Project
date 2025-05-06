@@ -75,13 +75,24 @@ public class ParkingGarageController {
 
     private Timeline timeline;
 
-    public Image loadImage() {
-        Image image = new Image(getClass().getResource("/com/example/images/carPlaceHolderImage.png").toExternalForm());
-        return image;
+    int carsEntered = 0;
+    int carsExited = 0;
+    int carSpots = 15;
+    int occupiedSpots = 0;
+
+    public Image loadImageOccupied() {
+        return new Image(getClass().getResource("/com/example/images/carPlaceHolderImage.png").toExternalForm());
     }
 
-    public Label getCurrentTimeLabel() {
-        return currentTimeLabel;
+    public Image loadImageUnoccupied() {
+        return new Image(getClass().getResource("/com/example/images/carPlaceHolderImageVacant.png").toExternalForm());
+    }
+
+    public void counter() {
+        carsEnteredLabel.setText(String.valueOf(carsEntered));
+        carsExitedLabel.setText(String.valueOf(carsExited));
+        vacantSpotsLabel.setText(String.valueOf(carSpots));
+        occupiedSpotsLabel.setText(String.valueOf(occupiedSpots));
     }
 
     public void updateTime() {
@@ -100,8 +111,44 @@ public class ParkingGarageController {
         }
     }
 
-    public void displayImage(String spotId) {
+    public void displayImageOccupied(String spotId) {
+        switch (spotId) {
+            case "A1": imageA1.setImage(loadImageOccupied()); break;
+            case "A2": imageA2.setImage(loadImageOccupied()); break;
+            case "A3": imageA3.setImage(loadImageOccupied()); break;
+            case "B1": imageB1.setImage(loadImageOccupied()); break;
+            case "B2": imageB2.setImage(loadImageOccupied()); break;
+            case "B3": imageB3.setImage(loadImageOccupied()); break;
+            case "C1": imageC1.setImage(loadImageOccupied()); break;
+            case "C2": imageC2.setImage(loadImageOccupied()); break;
+            case "C3": imageC3.setImage(loadImageOccupied()); break;
+            case "D1": imageD1.setImage(loadImageOccupied()); break;
+            case "D2": imageD2.setImage(loadImageOccupied()); break;
+            case "D3": imageD3.setImage(loadImageOccupied()); break;
+            case "E1": imageE1.setImage(loadImageOccupied()); break;
+            case "E2": imageE2.setImage(loadImageOccupied()); break;
+            case "E3": imageE3.setImage(loadImageOccupied()); break;
+        }
+    }
 
+    public void displayImageUnoccupied(String spotId) {
+        switch (spotId) {
+            case "A1": imageA1.setImage(loadImageUnoccupied()); break;
+            case "A2": imageA2.setImage(loadImageUnoccupied()); break;
+            case "A3": imageA3.setImage(loadImageUnoccupied()); break;
+            case "B1": imageB1.setImage(loadImageUnoccupied()); break;
+            case "B2": imageB2.setImage(loadImageUnoccupied()); break;
+            case "B3": imageB3.setImage(loadImageUnoccupied()); break;
+            case "C1": imageC1.setImage(loadImageUnoccupied()); break;
+            case "C2": imageC2.setImage(loadImageUnoccupied()); break;
+            case "C3": imageC3.setImage(loadImageUnoccupied()); break;
+            case "D1": imageD1.setImage(loadImageUnoccupied()); break;
+            case "D2": imageD2.setImage(loadImageUnoccupied()); break;
+            case "D3": imageD3.setImage(loadImageUnoccupied()); break;
+            case "E1": imageE1.setImage(loadImageUnoccupied()); break;
+            case "E2": imageE2.setImage(loadImageUnoccupied()); break;
+            case "E3": imageE3.setImage(loadImageUnoccupied()); break;
+        }
     }
 
     @FXML
@@ -126,6 +173,7 @@ public class ParkingGarageController {
         exitButton.setOnAction(e -> System.exit(0));
 
         updateTime();
+        counter();
 
         timeline = new Timeline(new KeyFrame(Duration.minutes(1), e -> updateTime()));
         timeline.setCycleCount(Timeline.INDEFINITE);
@@ -155,6 +203,7 @@ public class ParkingGarageController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("addCar.fxml"));
             Parent root = loader.load();
             addCarController addCarController = loader.getController();
+            addCarController.setMainController(this);
             Stage stage = new Stage();
             stage.setTitle("Add Car");
             stage.setScene(new Scene(root));

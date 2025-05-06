@@ -11,6 +11,12 @@ import java.util.HashMap;
 
 public class addCarController {
 
+    private ParkingGarageController pgc;
+
+    public void setMainController(ParkingGarageController mainController) {
+        this.pgc = mainController;
+    }
+
     private HashMap<String, Car> parkingSpots = ParkingManager.getInstance().getParkingSpots();
     private Stage stage;
 
@@ -41,10 +47,14 @@ public class addCarController {
         String spotId = spotId_input.getText();
         Car car = parkingSpots.get(spotId);
         if (car != null) {
-            car.setId("Occupied");
+            car.setId(spotId);
             car.setLicensePlateNumber(name_input.getText());
             car.setTime(timeEntered_input.getText());
             car.setType(typeOfVehicle_input.getText());
+            pgc.displayImageOccupied(spotId);
+            pgc.carsEntered++;
+            pgc.carSpots--;
+            pgc.occupiedSpots++;
         }
     }
 
@@ -54,6 +64,10 @@ public class addCarController {
         Car car = parkingSpots.get(spotId);
         if (car != null) {
             parkingSpots.put(spotId, new Car());
+            pgc.displayImageUnoccupied(spotId);
+            pgc.carsExited++;
+            pgc.occupiedSpots--;
+            pgc.carSpots++;
         }
     }
 
@@ -61,10 +75,12 @@ public class addCarController {
     public void initialize() {
         addCarButton.setOnAction(e -> {
             addCar();
+            pgc.counter();
             stage.close();
         });
         removeCarButton.setOnAction(e -> {
             removeCar();
+            pgc.counter();
             stage.close();
         });
     }

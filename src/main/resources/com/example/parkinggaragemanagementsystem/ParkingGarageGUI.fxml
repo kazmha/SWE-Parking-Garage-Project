@@ -61,22 +61,22 @@
                         <Font name="System Bold" size="44.0" />
                      </font>
                   </Label>
-                  <Label fx:id="carsEnteredLabel" layoutX="172.0" layoutY="467.0" text="0">
+                  <Label fx:id="carsEnteredLabel" layoutX="172.0" layoutY="467.0" text="-">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="carsExitedLabel" layoutX="172.0" layoutY="499.0" text="0">
+                  <Label fx:id="carsExitedLabel" layoutX="172.0" layoutY="499.0" text="-">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="vacantSpotsLabel" layoutX="198.0" layoutY="545.0" text="0">
+                  <Label fx:id="vacantSpotsLabel" layoutX="198.0" layoutY="545.0" text="-">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="occupiedSpotsLabel" layoutX="198.0" layoutY="578.0" text="0">
+                  <Label fx:id="occupiedSpotsLabel" layoutX="198.0" layoutY="578.0" text="-">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
