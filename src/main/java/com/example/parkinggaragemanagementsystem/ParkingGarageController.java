@@ -8,6 +8,8 @@ import javafx.util.Duration;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
+import javafx.scene.image.ImageView;
+
 
 public class ParkingGarageController {
     @FXML private Button addCarButton;
@@ -50,11 +52,32 @@ public class ParkingGarageController {
     @FXML private Label todaysDateLabel;
     @FXML private Button undoButton;
     @FXML private Label vacantSpotsLabel;
+    @FXML private ImageView imageA1;
+    @FXML private ImageView imageA2;
+    @FXML private ImageView imageA3;
+    @FXML private ImageView imageB1;
+    @FXML private ImageView imageB2;
+    @FXML private ImageView imageB3;
+    @FXML private ImageView imageC1;
+    @FXML private ImageView imageC2;
+    @FXML private ImageView imageC3;
+    @FXML private ImageView imageD1;
+    @FXML private ImageView imageD2;
+    @FXML private ImageView imageD3;
+    @FXML private ImageView imageE1;
+    @FXML private ImageView imageE2;
+    @FXML private ImageView imageE3;
+    @FXML private ImageView image;
+
 
     private Timeline timeline;
 
     public Label getCurrentTimeLabel() {
         return currentTimeLabel;
+    }
+
+    public void changeImage() {
+// todo set up way to change vacant image to the other image (with red car) when spot is currently occupied
     }
 
     public void updateTime() {

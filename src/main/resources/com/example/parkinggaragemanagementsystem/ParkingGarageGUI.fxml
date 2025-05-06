@@ -101,7 +101,7 @@
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="A1" textAlignment="CENTER" />
                                           <Button fx:id="buttonA1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
-                                                <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageA1" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
@@ -111,7 +111,7 @@
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="A2" textAlignment="CENTER" />
                                           <Button fx:id="buttonA2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
-                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageA2" fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
@@ -121,7 +121,7 @@
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="A3" textAlignment="CENTER" />
                                           <Button fx:id="buttonA3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
-                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageA3" fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
@@ -135,7 +135,7 @@
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="B1" textAlignment="CENTER" />
                                           <Button fx:id="buttonB1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
-                                                <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageB1" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
@@ -145,7 +145,7 @@
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="B2" textAlignment="CENTER" />
                                           <Button fx:id="buttonB2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
-                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageB2" fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
@@ -155,7 +155,7 @@
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="B3" textAlignment="CENTER" />
                                           <Button fx:id="buttonB3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
-                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageB3" fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
@@ -169,7 +169,7 @@
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="C1" textAlignment="CENTER" />
                                           <Button fx:id="buttonC1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
-                                                <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageC1" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
@@ -179,7 +179,7 @@
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="C2" textAlignment="CENTER" />
                                           <Button fx:id="buttonC2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
-                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageC2" fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
@@ -189,7 +189,7 @@
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="C3" textAlignment="CENTER" />
                                           <Button fx:id="buttonC3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
-                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageC3" fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
@@ -203,7 +203,7 @@
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="D1" textAlignment="CENTER" />
                                           <Button fx:id="buttonD1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
-                                                <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageD1" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
@@ -213,7 +213,7 @@
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="D2" textAlignment="CENTER" />
                                           <Button fx:id="buttonD2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
-                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageD2" fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
@@ -223,7 +223,7 @@
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="D3" textAlignment="CENTER" />
                                           <Button fx:id="buttonD3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
-                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageD3" fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
@@ -237,7 +237,7 @@
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="E1" textAlignment="CENTER" />
                                           <Button fx:id="buttonE1" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
-                                                <ImageView fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageE1" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
@@ -247,7 +247,7 @@
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="E2" textAlignment="CENTER" />
                                           <Button fx:id="buttonE2" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
-                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageE2" fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
@@ -257,7 +257,7 @@
                                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="200.0" text="E3" textAlignment="CENTER" />
                                           <Button fx:id="buttonE3" mnemonicParsing="false" prefHeight="150.0" prefWidth="203.68" style="-fx-background-color: #3c4142;">
                                              <graphic>
-                                                <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fx:id="imageE3" fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/carPlaceHolderImageVacant.png" />
                                                    </image>
