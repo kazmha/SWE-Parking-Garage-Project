@@ -61,11 +61,12 @@ public class editCarController {
         try {
             if (car != null) {
                 if (!timeEntered_input.getText().isEmpty()) {
-                    car.setTime(name_input.getText());
+                    car.setTime(timeEntered_input.getText());
                 }
                 car.setLicensePlateNumber(name_input.getText());
                 car.setType(typeOfVehicle_input.getText());
                 HistoryLogger.logAction("Spot " + spotId + " was modified");
+                pgc.displayLabels(spotId);
                 stage.close();
 
             }

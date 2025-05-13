@@ -19,6 +19,8 @@ import java.io.IOException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
+import java.util.Objects;
+
 import javafx.scene.image.ImageView;
 
 
@@ -85,6 +87,12 @@ public class ParkingGarageController {
     int carsExited = 0;
     int carSpots = 15;
     int occupiedSpots = 0;
+
+    double baseCost = 0.00;
+    double taxes = 0.00;
+    double lateFees = 0.00;
+    double totalCost = 0.00;
+
     double revenue = 0.00;
     double profit = 0.00;
 
@@ -120,7 +128,21 @@ public class ParkingGarageController {
             spotLicensePlateLabel.setText(car.getLicensePlateNumber());
             spotTimeFrameLabel.setText(car.getTime() + " Hours");
             spotVehicleTypeLabel.setText(car.getType());
+
+            if (Objects.equals(spotStatusLabel.getText(), "Unoccupied")) {
+                spotBaseCostLabel.setText("$0.00");
+                spotTaxesLabel.setText("$0.00");
+                spotLateFeeLabel.setText("$0.00");
+                spotTotalCostLabel1.setText("$0.00");
+            }
+            else {
+                spotBaseCostLabel.setText("$" + String.format("%.2f", baseCost));
+                spotTaxesLabel.setText("$" + String.format("%.2f", taxes));
+                spotLateFeeLabel.setText("$" + String.format("%.2f", lateFees));
+                spotTotalCostLabel1.setText("$" + String.format("%.2f", totalCost));
+            }
         }
+
     }
 
     public void displayImageOccupied(String spotId) {
@@ -166,35 +188,29 @@ public class ParkingGarageController {
     public void calculateRate(String spotId) {
         Car car = ParkingManager.getInstance().getCar(spotId);
 
-        if (spotId.equals("Unoccupied")) {
-            spotBaseCostLabel.setText("$0.00");
-            spotTaxesLabel.setText("$0.00");
-            spotLateFeeLabel.setText("$0.00");
-            spotTotalCostLabel1.setText("$0.00");
-        }
-
         if (car != null) {
             double hours = Double.parseDouble(car.getTime());
             double taxRate = .08625;
             double lateFees = 0.0;
             hourlyRates.setHours(hours);
 
-            double baseCost = hourlyRates.calculateRate();
-            double taxes = baseCost * taxRate;
-            double totalCost = baseCost + taxes + lateFees;
+            baseCost = hourlyRates.calculateRate();
+            taxes = baseCost * taxRate;
+            totalCost = baseCost + taxes + lateFees;
             revenue += baseCost + lateFees;
             profit = revenue*.80;
-
-            spotBaseCostLabel.setText("$" + String.format("%.2f", baseCost));
-            spotTaxesLabel.setText("$" + String.format("%.2f", taxes));
-            spotLateFeeLabel.setText("$" + String.format("%.2f", lateFees));
-            spotTotalCostLabel1.setText("$" + String.format("%.2f", totalCost));
 
             currentRevenueLabel.setText("$" + String.format("%.2f", revenue));
             currentProfitLabel.setText("$" + String.format("%.2f", profit));
 
             calculateSpotButton.setDisable(true);
-            HistoryLogger.logAction("Rate for " + spotId + " was calculated");
+            displayLabels(spotId);
+            HistoryLogger.logAction("Rate for " + spotId + " was calculated" +
+                    " | Base Cost = " + String.format("%.2f", baseCost) +
+                    " | Taxes = " + String.format("%.2f", taxes) +
+                    " | Late Fees = " + String.format("%.2f", lateFees) +
+                    " | Total Cost = " + String.format("%.2f", totalCost));
+            HistoryLogger.logAction("Current Revenue = " + String.format("%.2f", revenue) + " | Current Profit = " + String.format("%.2f", profit));
         }
     }
 
