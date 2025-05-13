@@ -6,7 +6,15 @@ public class ParkingManager {
     private static ParkingManager instance;
     private HashMap<String, Car> parkingSpots;
 
-    private ParkingManager() {
+    public void reset() {
+        setParkingManager();
+    }
+
+    public ParkingManager() {
+        setParkingManager();
+    }
+
+    private void setParkingManager() {
         parkingSpots = new HashMap<>();
         parkingSpots.put("A1", new Car());
         parkingSpots.put("A2", new Car());

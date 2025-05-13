@@ -9,6 +9,11 @@ public class HourlyRates {
         this.rate = rate;
     }
 
+    public HourlyRates() {
+        hours = 0;
+        rate = 0;
+    }
+
     public double getHours() {
         return hours;
     }
@@ -26,15 +31,17 @@ public class HourlyRates {
     }
 
     public double calculateRate() {
-        if (hours <= 1)
+        if (this.hours <= 0)
+            return 0;
+        else if (this.hours <= 1)
             return 9.25;
-        else if (hours <= 2)
+        else if (this.hours <= 2)
             return 15.95;
-        else if (hours <= 4)
+        else if (this.hours <= 4)
             return 24.95;
-        else if (hours <= 8)
+        else if (this.hours <= 8)
             return 60.95;
-        else if (hours <= 12)
+        else if (this.hours <= 12)
             return 84.95;
         else
             return 149.95;

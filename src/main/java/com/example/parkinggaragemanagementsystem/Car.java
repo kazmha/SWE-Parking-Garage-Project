@@ -19,7 +19,7 @@ public class Car {
     public Car() {
         id = new SimpleStringProperty("Unoccupied");
         licensePlateNumber = new SimpleStringProperty("N/A");
-        time = new SimpleStringProperty("N/A");
+        time = new SimpleStringProperty("0");
         type = new SimpleStringProperty("N/A");
     }
 

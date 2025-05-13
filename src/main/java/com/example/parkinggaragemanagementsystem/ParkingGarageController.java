@@ -2,8 +2,10 @@ package com.example.parkinggaragemanagementsystem;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -12,6 +14,8 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
@@ -35,7 +39,7 @@ public class ParkingGarageController {
     @FXML private Button buttonE1;
     @FXML private Button buttonE2;
     @FXML private Button buttonE3;
-    @FXML private Button calculateSpotButton;
+    @FXML public Button calculateSpotButton;
     @FXML private Label carsEnteredLabel;
     @FXML private Label carsExitedLabel;
     @FXML private Label carSpotLabel;
@@ -61,7 +65,6 @@ public class ParkingGarageController {
     @FXML private ImageView imageE2;
     @FXML private ImageView imageE3;
     @FXML private Label occupiedSpotsLabel;
-    @FXML private Button removeCarButton;
     @FXML private Button resetButton;
     @FXML private Label spotBaseCostLabel;
     @FXML private Label spotLateFeeLabel;
@@ -74,30 +77,20 @@ public class ParkingGarageController {
     @FXML private Label todaysDateLabel;
     @FXML private Button undoButton;
     @FXML private Label vacantSpotsLabel;
-    @FXML private ImageView imageA1;
-    @FXML private ImageView imageA2;
-    @FXML private ImageView imageA3;
-    @FXML private ImageView imageB1;
-    @FXML private ImageView imageB2;
-    @FXML private ImageView imageB3;
-    @FXML private ImageView imageC1;
-    @FXML private ImageView imageC2;
-    @FXML private ImageView imageC3;
-    @FXML private ImageView imageD1;
-    @FXML private ImageView imageD2;
-    @FXML private ImageView imageD3;
-    @FXML private ImageView imageE1;
-    @FXML private ImageView imageE2;
-    @FXML private ImageView imageE3;
-    @FXML private ImageView image;
-
 
     private Timeline timeline;
+    HourlyRates hourlyRates = new HourlyRates();
 
     int carsEntered = 0;
     int carsExited = 0;
     int carSpots = 15;
     int occupiedSpots = 0;
+    double revenue = 0.00;
+    double profit = 0.00;
+
+    public String getSpotStatusLabel() {
+        return spotStatusLabel.getText();
+    }
 
     public Image loadImageOccupied() {
         return new Image(getClass().getResource("/com/example/images/carPlaceHolderImage.png").toExternalForm());
@@ -114,10 +107,6 @@ public class ParkingGarageController {
         occupiedSpotsLabel.setText(String.valueOf(occupiedSpots));
     }
 
-    public void changeImage() {
-// todo set up way to change vacant image to the other image (with red car) when spot is currently occupied
-    }
-
     public void updateTime() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("K:mm a");
         currentTimeLabel.setText(LocalTime.now().format(formatter));
@@ -129,7 +118,7 @@ public class ParkingGarageController {
         if (car != null) {
             spotStatusLabel.setText(car.getId());
             spotLicensePlateLabel.setText(car.getLicensePlateNumber());
-            spotTimeFrameLabel.setText(car.getTime());
+            spotTimeFrameLabel.setText(car.getTime() + " Hours");
             spotVehicleTypeLabel.setText(car.getType());
         }
     }
@@ -174,6 +163,41 @@ public class ParkingGarageController {
         }
     }
 
+    public void calculateRate(String spotId) {
+        Car car = ParkingManager.getInstance().getCar(spotId);
+
+        if (spotId.equals("Unoccupied")) {
+            spotBaseCostLabel.setText("$0.00");
+            spotTaxesLabel.setText("$0.00");
+            spotLateFeeLabel.setText("$0.00");
+            spotTotalCostLabel1.setText("$0.00");
+        }
+
+        if (car != null) {
+            double hours = Double.parseDouble(car.getTime());
+            double taxRate = .08625;
+            double lateFees = 0.0;
+            hourlyRates.setHours(hours);
+
+            double baseCost = hourlyRates.calculateRate();
+            double taxes = baseCost * taxRate;
+            double totalCost = baseCost + taxes + lateFees;
+            revenue += baseCost + lateFees;
+            profit = revenue*.80;
+
+            spotBaseCostLabel.setText("$" + String.format("%.2f", baseCost));
+            spotTaxesLabel.setText("$" + String.format("%.2f", taxes));
+            spotLateFeeLabel.setText("$" + String.format("%.2f", lateFees));
+            spotTotalCostLabel1.setText("$" + String.format("%.2f", totalCost));
+
+            currentRevenueLabel.setText("$" + String.format("%.2f", revenue));
+            currentProfitLabel.setText("$" + String.format("%.2f", profit));
+
+            calculateSpotButton.setDisable(true);
+            HistoryLogger.logAction("Rate for " + spotId + " was calculated");
+        }
+    }
+
     @FXML
     public void initialize() {
         buttonA1.setOnAction(e -> displayLabels("A1"));
@@ -193,7 +217,20 @@ public class ParkingGarageController {
         buttonE3.setOnAction(e -> displayLabels("E3"));
 
         addCarButton.setOnAction(e -> openAddCarWindow());
-        exitButton.setOnAction(e -> System.exit(0));
+        calculateSpotButton.setDisable(true);
+        calculateSpotButton.setOnAction(e -> calculateRate(spotStatusLabel.getText()));
+        editButton.setOnAction(e -> openEditWindow());
+
+        resetButton.setOnAction(e -> {
+            HistoryLogger.logAction("Program reset");
+            restart();
+        });
+        exitButton.setOnAction(e -> {
+            HistoryLogger.logAction("Program exited");
+            System.exit(0);
+        });
+
+        historyButton.setOnAction(e -> ParkingGarageApplication.checkHistory());
 
         updateTime();
         counter();
@@ -234,6 +271,37 @@ public class ParkingGarageController {
             stage.show();
         }
         catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void openEditWindow() {
+        if (!spotStatusLabel.getText().equals("Unoccupied")) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("editCar.fxml"));
+                Parent root = loader.load();
+                editCarController editCarController = loader.getController();
+                editCarController.setMainController(this);
+                Stage stage = new Stage();
+                stage.setTitle("Edit Car");
+                stage.setScene(new Scene(root));
+                editCarController.setStage(stage);
+                stage.show();
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @FXML
+    public void restart() {
+        try {
+            ParkingGarageApplication.restart();
+            ParkingManager.getInstance().reset();
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }
